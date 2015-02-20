@@ -104,6 +104,7 @@
 	}
 }
 
+// slide selection by radio check
 .check(@slides) when (@slides > 0) {
 	input[type=radio]:nth-of-type(@{slides}):checked ~ .slider-wrapper {
 		.slide:nth-of-type(@{slides}) {
@@ -120,6 +121,8 @@
 	.check((@slides - 1));
 }
 
+
+// select z-index for next/prev arrows
 .slectIndexLeft(@current) when (@current > 1) {
 	@new: @current - 1;
 	.slider-controls.left {

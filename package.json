@@ -1,7 +1,7 @@
 {
-  "name": "health",
+  "name": "css-slider",
   "version": "1.0.0",
-  "description": "",
+  "description": "simple css slider (less)",
   "main": " ",
   "dependencies": {
     "gulp": "^3.8.10",
@@ -19,6 +19,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Nikita Meshcheriakov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/betmakh/cssSlider-less-.git"
+  },
+  "keywords": [
+    "slider"
+  ],
+  "bugs": {
+    "url": "https://github.com/betmakh/cssSlider-less-/issues"
+  },
+  "homepage": "https://github.com/betmakh/cssSlider-less-"
 }

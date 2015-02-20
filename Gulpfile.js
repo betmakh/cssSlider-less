@@ -9,7 +9,8 @@ var gulp          = require('gulp'),
     uglify        = require('gulp-uglify'),
     srcFolder = 'src',
     dstFolder = 'dst',
-    normalize = require('normalize');
+    normalize = require('normalize'),
+    cssBase64 = require('gulp-css-base64');
 
 
 // HTML
@@ -50,6 +51,7 @@ gulp.task('styles', function() {
     .pipe(plumber())
     // .pipe(concat('base.scss'))
     .pipe(less())
+    .pipe(cssBase64())
     .pipe(prefix())
     .pipe(minifyCSS({keepBreaks: true}))
     .pipe(gulp.dest(dstFolder + '/styles'))
@@ -70,14 +72,14 @@ gulp.task('styles', function() {
 // JS
 
 
-gulp.task('scripts', function() {
-  return gulp.src(srcFolder + 'js/*.js')
-    .pipe(plumber())
-    .pipe(concat('scripts.js'))
-    // .pipe(uglify())
-    .pipe(gulp.dest(dstFolder + '/js'))
-    .pipe(connect.reload());
-});
+// gulp.task('scripts', function() {
+//   return gulp.src(srcFolder + 'js/*.js')
+//     .pipe(plumber())
+//     .pipe(concat('scripts.js'))
+//     // .pipe(uglify())
+//     .pipe(gulp.dest(dstFolder + '/js'))
+//     .pipe(connect.reload());
+// });
 
 // gulp.task('scripts', function() {
 //   return gulp.src('src/js/*.js')
@@ -91,7 +93,7 @@ gulp.task('scripts', function() {
 
 var paths = {
   htmls:          '*.html',
-  scripts:         srcFolder + '/js/*.js',
+  // scripts:         srcFolder + '/js/*.js',
   // 'base-styles':  'scss/base/*.scss',
   // scripts: 'js/*js',
   styles:  srcFolder + '/styles/*.less'
@@ -116,6 +118,5 @@ gulp.task('connect', function() {
 gulp.task('default',  [
   'connect',
   'styles',
-  'watch',
-  'scripts'
+  'watch'
   ]);
