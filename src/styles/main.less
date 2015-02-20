@@ -1,0 +1,25 @@
+@import 'normalize.css';
+@import 'grid.css';
+@img-path: '../../src/img/';
+@font-main: Arial, sans-serif, serif;
+@green: #12ba00;
+@gray: #d1d3d4;
+@yellow: #fff601;
+@blue: #32b2d1;
+@blue-dark: #168ba7;
+@orange: #ffb400;
+@container-width: 960;
+
+@import 'mixins';
+@import 'slider';
+
+.container {
+	width: e('@{container-width}px');
+	margin: auto;
+	.clearfix();
+}
+
+#slider1 {
+	.slider(4, 300px);
+}
+
