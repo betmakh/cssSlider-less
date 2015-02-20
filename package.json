@@ -23,7 +23,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/betmakh/cssSlider-less-.git"
+    "url": "https://github.com/betmakh/cssSlider-less.git"
   },
   "keywords": [
     "slider"
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/betmakh/cssSlider-less-/issues"
   },
-  "homepage": "https://github.com/betmakh/cssSlider-less-"
+  "homepage": "https://github.com/betmakh/cssSlider-less"
 }
